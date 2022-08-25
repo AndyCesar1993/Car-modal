@@ -3,6 +3,7 @@
   --black: #000000;
   --blue: #203774;
   --lightblue: #48688d;
+  --backh1:linear-gradient(138deg, rgba(17,15,16,1) 47%, rgba(22,58,101,1) 68%);
 }
 body {
   display: flex;
@@ -14,9 +15,8 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url(./fondo.gif);
-  background-size:100% 100%;
-/*   background-color: rgb(209, 199, 199);
- */  gap: 30px;
+  background-size: 100% 100%;
+  gap: 30px;
 }
 .header {
   display: flex;
@@ -48,8 +48,7 @@ nav input {
 nav input:hover {
   font-size: 50px;
 }
-.fecha,
-.sol-turno {
+.fecha,.sol-turno {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -65,7 +64,7 @@ nav input:hover {
   border: none;
   background: none;
   font-weight: lighter;
-  cursor:pointer;
+  cursor: pointer;
 }
 .fecha section {
   display: flex;
@@ -73,38 +72,41 @@ nav input:hover {
   align-items: center;
   line-height: 0;
 }
-.fecha section h1 {
+.fecha section div {
   font-size: 60px;
   font-weight: bolder;
   text-shadow: 6px 6px 6px gray;
+  background: var(--backh1);
+  -webkit-background-clip: text;
+  color: transparent;
 }
-.fecha section h3{
-    margin-top: 0;
-    font-size:30px
+.fecha section h3 {
+  margin-top: 0;
+  font-size: 30px;
 }
-.sol-turno section{
-    display: flex;
-    flex-direction:column;
-    color: var(--white);
-    padding: 15px;
-    line-height: 30px;
+.sol-turno section {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  padding: 15px;
+  line-height: 30px;
 }
-.sol-turno{
-    display:flex;
-    justify-content: space-between;
-    background: var(--blue);
-    border-radius:20px;
-    width: 600px;
+.sol-turno {
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue);
+  border-radius: 20px;
+  width: 600px;
 }
-.sol-turno section h3{
-    font-size:40px;
-    text-shadow: 6px 6px 6px #323332;
+.sol-turno section h3 {
+  font-size: 40px;
+  text-shadow: 6px 6px 6px #323332;
 }
-.sol-turno section p{
-font-size: 20px;
-margin-top: 0;
+.sol-turno section p {
+  font-size: 20px;
+  margin-top: 0;
 }
-.sol-turno button{
+.sol-turno button {
   display: flex;
   background: var(--white);
   height: 40px;
@@ -115,19 +117,19 @@ margin-top: 0;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin:40px 30px 0 0;
+  margin: 40px 30px 0 0;
   text-shadow: 1px 1px 1px #323332;
   box-shadow: 6px 6px 0px #1d1d19;
 }
-.dr{
-    display:flex;
-    gap: 15px;
-    align-items: center;
+.dr {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .dr img {
   width: 60px;
-  height:60px;
+  height: 60px;
   border: 2px solid var(--lightblue);
   border-radius: 200px;
 }
